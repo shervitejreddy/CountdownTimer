@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>
+hi
+</title>
+</head>
+<body bgcolor='#AAff00'>
+<p id="demo" align="middle">
+</p>
+<script>
+var t=setInterval(function(){var x=new Date();
+var y=x.getFullYear();
+var m=x.getMonth();
+var d=x.getDate();
+if(m<2||(m=2&&d<5))
+{var count=new Date("14 jul,"+y).getTime();
+var dat=new Date().getTime();
+var distance=count-x;
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("demo").innerHTML=days+":"+hours+":"+minutes+":"+seconds;
+}
+else if(m>2||(m=2&&d>5))
+{var count=new Date("5 mar,"+(y+1)).getTime();
+var dat=new Date().getTime();
+var distance=count-x;
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+ var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("demo").innerHTML=days+":"+hours+":"+minutes+":"+seconds;
+}
+
+else
+{document.getElementById("demo").innerHTML ="happy bday";}},1000)
+</script>
+</body>
+</body>
+</html>
